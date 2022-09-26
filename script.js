@@ -171,25 +171,3 @@ document.getElementById('button_remove').addEventListener('click', (event) => {
   display_the_rolls();
 
 });
-
-var array, website, links;
-
-
-array = [null, null, null];
-
-website = ['Code Your Future', 'Google', 'bbc news'];
-links = ['https://codeyourfuture.io/', 'https://www.google.co.uk/', 'https://www.bbc.co.uk/news'];
-while (!!website.length) {
-  if(--window.LoopTrap <= 0) throw "Infinite loop.";
-  let element_list = document.getElementById('list');
-  let new_li = document.createElement('li');
-  let new_a = document.createElement('a');
-  new_a.setAttribute("href", links.shift());
-  new_a.innerText = website.pop();
-
-  new_li.appendChild(new_a);
-
-  element_list.appendChild(new_li);
-}
-
-array;
