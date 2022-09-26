@@ -97,3 +97,77 @@ document.getElementById('button').addEventListener('click', (event) => {
 });
 if (false) {
 }
+
+
+var rolls, dice, player, item;
+
+function randomInt(n) {
+  // Return a random number from in [0, n[
+  return Math.floor(Math.random()*n);
+}
+
+function randomMember(arr) {
+  // Return a random member of the array
+  return arr[randomInt(arr.length)]
+}
+
+// Describe this function...
+function display_the_rolls() {
+  if(--window.LoopTrap <= 0) throw "Infinite loop.";
+  let element_list2 = document.getElementById('list');
+  rolls.forEach((item) => {
+    let new_li = document.createElement('li');
+    new_li.innerText = rolls;
+
+    element_list2.appendChild(new_li);
+  });
+  let element_total = document.getElementById('total');
+  element_total.innerText = rolls.reduce((a,b) => a+b, 0);
+}
+
+
+rolls = [0, 0, 0, 0, 0, 0];
+display_the_rolls();
+
+
+document.getElementById('button_roll').addEventListener('click', (event) => {
+  dice = [1, 2, 3, 4, 4, 6];
+  rolls.shift();
+  rolls.push(randomMember(dice));
+  let element_list = document.getElementById('list');
+  element_list.replaceChildren();
+  display_the_rolls();
+
+});
+
+document.getElementById('button_restart').addEventListener('click', (event) => {
+  rolls = [];
+  let element_total2 = document.getElementById('total');
+  element_total2.replaceChildren();
+  element_total2.innerText = 0;
+  let element_list3 = document.getElementById('list');
+  element_list3.replaceChildren();
+
+});
+
+document.getElementById('button_roll').addEventListener('click', (event) => {
+  player = rolls.reduce((a,b) => a+b, 0);
+  if (player > 11) {
+    let element_info = document.getElementById('info');
+    element_info.replaceChildren();
+    element_info.innerText = 'You Lost';
+  } else if (player == 11) {
+    let element_info2 = document.getElementById('info');
+    element_info2.innerText = 'You Won';
+  }
+
+});
+
+document.getElementById('button_remove').addEventListener('click', (event) => {
+  rolls.pop();
+  rolls.push(0);
+  let element_list4 = document.getElementById('list');
+  element_list4.replaceChildren();
+  display_the_rolls();
+
+});
