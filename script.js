@@ -171,3 +171,25 @@ document.getElementById('button_remove').addEventListener('click', (event) => {
   display_the_rolls();
 
 });
+
+var pictures;
+
+
+pictures = ['https://lumiere-a.akamaihd.net/v1/images/p_thejunglebook2016_19751_6b8cfcec.jpeg', 'https://m.media-amazon.com/images/M/MV5BMTkyNTUxMDczMF5BMl5BanBnXkFtZTgwMTUzNDA4NjE@._V1_.jpg', 'https://i.ytimg.com/vi/Erl_RnQZ7PA/maxresdefault.jpg', 'https://i.ytimg.com/vi/PPuqz3PL2Ck/maxresdefault.jpg'];
+let element_jungle = document.getElementById('jungle');
+element_jungle.setAttribute("src", pictures[0]);
+
+
+document.getElementById('next').addEventListener('click', (event) => {
+  let element_jungle2 = document.getElementById('jungle');
+  pictures.push(pictures.shift());
+  element_jungle2.setAttribute("src", pictures[0]);
+
+});
+
+document.getElementById('previous').addEventListener('click', (event) => {
+  let element_jungle3 = document.getElementById('jungle');
+  pictures.unshift(pictures.pop());
+  element_jungle3.setAttribute("src", pictures[0]);
+
+});
