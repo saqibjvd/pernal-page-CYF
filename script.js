@@ -172,6 +172,26 @@ document.getElementById('button_remove').addEventListener('click', (event) => {
 
 });
 
+
+var story, image, page;
+
+
+story = ['Quotes from The Jungle Book that will make you think, smile and thrive', 'The strength of the pack is the wolf, and the strength of the wolf is the pack', 'Don’t spend your time looking for something you want that can’t be found.When you find out you can live without it, go along not thinking about it.', 'Greater love hath no one than he who lays down his life for his friend.'];
+image = ['https://m.media-amazon.com/images/M/MV5BMTkyNTUxMDczMF5BMl5BanBnXkFtZTgwMTUzNDA4NjE@._V1_.jpg', 'https://i.ytimg.com/vi/Erl_RnQZ7PA/maxresdefault.jpg', 'https://i.ytimg.com/vi/PPuqz3PL2Ck/maxresdefault.jpg', 'https://i.ytimg.com/vi/PPuqz3PL2Ck/maxresdefault.jpg'];
+page = [2, 3, 4, 5];
+
+
+document.getElementById('next_page').addEventListener('click', (event) => {
+  let element_story = document.getElementById('story');
+  element_story.innerText = story.shift();
+  let element_image = document.getElementById('image');
+  element_image.setAttribute("src", image.shift());
+  let element_page_number = document.getElementById('page_number');
+  element_page_number.innerText = page.shift();
+
+});
+
+
 var pictures;
 
 
