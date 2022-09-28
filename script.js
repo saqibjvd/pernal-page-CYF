@@ -225,18 +225,6 @@ function getNumberOrString(value) {
 }
 
 
-// function getNumberOrString(value) {
-//   // Convert a string value to a number if possible
-//   let number_value = Number(value);
-//   if (Number.isNaN(number_value)) {
-//     return value
-//   } else {
-//     return number_value
-//   }
-// }
-
-
-
 document.getElementById('send').addEventListener('click', (event) => {
   let element_name = document.getElementById('name');
   let new_li = document.createElement('li');
