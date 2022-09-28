@@ -240,53 +240,53 @@ document.getElementById('send').addEventListener('click', (event) => {
 
 });
 
-var shopping, item;
+// var shopping, item;
 
 
-shopping = ['Books', 'Toys', 'Movies'];
-let element_list = document.getElementById('list');
-shopping.forEach((item) => {
-  let new_li = document.createElement('li');
-  new_li.innerText = item;
-  let new_span = document.createElement('span');
-  let new_button = document.createElement('button');
-  new_button.innerText = 'add to basket';
-  new_button.setAttribute("id", item);
+// shopping = ['Books', 'Toys', 'Movies'];
+// let element_list = document.getElementById('list');
+// shopping.forEach((item) => {
+//   let new_li = document.createElement('li');
+//   new_li.innerText = item;
+//   let new_span = document.createElement('span');
+//   let new_button = document.createElement('button');
+//   new_button.innerText = 'add to basket';
+//   new_button.setAttribute("id", item);
 
-  new_span.appendChild(new_button);
+//   new_span.appendChild(new_button);
 
-  new_li.appendChild(new_span);
+//   new_li.appendChild(new_span);
 
-  element_list.appendChild(new_li);
-});
+//   element_list.appendChild(new_li);
+// });
 
 
-document.getElementById('Books').addEventListener('click', (event) => {
-  let element_list2 = document.getElementById('list');
-  let element_shop = document.getElementById('shop');
-  let new_li2 = document.createElement('li');
-  new_li2.innerText = 'Jungle Book: £5';
+// document.getElementById('Books').addEventListener('click', (event) => {
+//   let element_list2 = document.getElementById('list');
+//   let element_shop = document.getElementById('shop');
+//   let new_li2 = document.createElement('li');
+//   new_li2.innerText = 'Jungle Book: £5';
 
-  element_shop.appendChild(new_li2);
+//   element_shop.appendChild(new_li2);
 
-});
+// });
 
-document.getElementById('Toys').addEventListener('click', (event) => {
-  let element_list3 = document.getElementById('list');
-  let element_shop2 = document.getElementById('shop');
-  let new_li3 = document.createElement('li');
-  new_li3.innerText = 'Jungle Book Toys: £8';
+// document.getElementById('Toys').addEventListener('click', (event) => {
+//   let element_list3 = document.getElementById('list');
+//   let element_shop2 = document.getElementById('shop');
+//   let new_li3 = document.createElement('li');
+//   new_li3.innerText = 'Jungle Book Toys: £8';
 
-  element_shop2.appendChild(new_li3);
+//   element_shop2.appendChild(new_li3);
 
-});
+// });
 
-document.getElementById('Movies').addEventListener('click', (event) => {
-  let element_list4 = document.getElementById('list');
-  let element_shop3 = document.getElementById('shop');
-  let new_li4 = document.createElement('li');
-  new_li4.innerText = 'Jungle Book Movie: £12';
+// document.getElementById('Movies').addEventListener('click', (event) => {
+//   let element_list4 = document.getElementById('list');
+//   let element_shop3 = document.getElementById('shop');
+//   let new_li4 = document.createElement('li');
+//   new_li4.innerText = 'Jungle Book Movie: £12';
 
-  element_shop3.appendChild(new_li4);
+//   element_shop3.appendChild(new_li4);
 
-});
+// });
