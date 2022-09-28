@@ -68,6 +68,12 @@ section{
   background-color: rgb(41 62 70);
 }
 
+.projects {
+  
+  background-color: rgb(88, 113, 102);
+  align-items: center;
+}
+
 
 p {
   color: white;
